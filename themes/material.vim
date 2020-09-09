@@ -10,6 +10,6 @@ if (has('termguicolors'))
   set termguicolors
 endif
 
-let g:material_theme_style = 'darker'
+let g:material_theme_style = 'ocean'
 let g:material_terminal_italics = 0
 colorscheme material

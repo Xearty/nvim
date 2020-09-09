@@ -36,12 +36,15 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
-"set clipboard=unnamedplus               " Copy paste between vim and everything else
-set autochdir                           " Your working directory will always be the same as your working directory
+"set clipboard=unnamedplus               " Copy paste between vim and everything els
+"set autochdir                           " Your working directory will always be the same as your working directory
 set nobackup                            "no backup files
 set nowritebackup                       "only in case you don't want a backup file while editing
 set noswapfile                          "no swap files
 set wildmenu
+
+" use terminal background
+"" autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
 
 " Hiding cursor line in inactive splits
 augroup CursorLine
