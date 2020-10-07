@@ -1,8 +1,6 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
-let g:yats_host_keyword = 1
-
 set termguicolors
 set re=0
 syntax enable                           " Enables syntax highlighing
@@ -27,7 +25,7 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=0                        " Always display the status line
 set number relativenumber               " Line numbers
-set cursorline                          " Enable highlighting of the current line
+" set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=0                       " Always show tabs 
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
@@ -42,18 +40,21 @@ set nobackup                            "no backup files
 set nowritebackup                       "only in case you don't want a backup file while editing
 set noswapfile                          "no swap files
 set wildmenu
+set ignorecase
+set signcolumn=no
+" set guicursor=                          "Gets rid of the different cursor shapes in diffrenet modes
 
 " use terminal background
-"" autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
+" autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
 
 " Hiding cursor line in inactive splits
-augroup CursorLine
-    au!
-    au VimEnter * setlocal cursorline
-    au WinEnter * setlocal cursorline
-    au BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-augroup END
+" augroup CursorLine
+    " au!
+    " au VimEnter * setlocal cursorline
+    " au WinEnter * setlocal cursorline
+    " au BufWinEnter * setlocal cursorline
+    " " au WinLeave * setlocal nocursorline
+" augroup END
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vim alternatively you can run :source $MYVIMRC
 

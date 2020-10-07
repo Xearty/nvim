@@ -7,28 +7,39 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
     " Syntax highlighting
     " Plug 'arakashic/chromatica.nvim'
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'https://github.com/cespare/vim-toml'
-    " Plug 'pangloss/vim-javascript'
+    Plug 'pangloss/vim-javascript'
     Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'https://github.com/uiiaoo/java-syntax.vim'
+    Plug 'https://github.com/MaxMEllon/vim-jsx-pretty'
 
     " Code completion
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'https://github.com/mattn/emmet-vim'
 
     " Color schemes
     Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+    Plug 'https://github.com/chriskempson/base16-vim'
     Plug 'fcpg/vim-fahrenheit'
+    Plug 'fcpg/vim-orbital'
+    Plug 'dylanaraps/wal.vim'
+    Plug 'sainnhe/gruvbox-material'
+    Plug 'https://github.com/morhetz/gruvbox'
 
     Plug 'vim-airline/vim-airline'
+
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
     "File navigation
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'scrooloose/NERDTree'
 
+    Plug 'https://github.com/tpope/vim-surround.git'
     Plug 'https://github.com/Yggdroot/indentLine'
     Plug 'liuchengxu/vim-which-key' 
     Plug 'jiangmiao/auto-pairs'
@@ -57,3 +68,5 @@ let g:cpp_concepts_highlight = 1
 " indentLine
 " let g:indentLine_setColors = 0
 
+" Java syntax [disable highlighting of identifiers]
+highlight link JavaIdentifier NONE
