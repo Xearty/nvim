@@ -9,7 +9,8 @@ source $HOME/.config/nvim/general/settings.vim
 "source $HOME/.config/nvim/themes/onedark.vim
 "source $HOME/.config/nvim/themes/dracula.vim
 "source $HOME/.config/nvim/themes/material.vim
-source $HOME/.config/nvim/themes/gruvbox.vim
-source $HOME/.config/nvim/themes/airline.vim
+"source $HOME/.config/nvim/themes/gruvbox.vim
+source $HOME/.config/nvim/themes/base16.vim
+"source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/keys/which-key.vim

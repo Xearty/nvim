@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Syntax highlighting
     " Plug 'arakashic/chromatica.nvim'
     Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'https://github.com/dag/vim-fish.git'
     Plug 'https://github.com/cespare/vim-toml'
     Plug 'pangloss/vim-javascript'
     Plug 'HerringtonDarkholme/yats.vim'
@@ -20,6 +21,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'https://github.com/mattn/emmet-vim'
 
+    " Language support
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
     " Color schemes
     Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'https://github.com/chriskempson/base16-vim'
@@ -29,7 +33,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sainnhe/gruvbox-material'
     Plug 'https://github.com/morhetz/gruvbox'
 
-    Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline'
 
     Plug 'peitalin/vim-jsx-typescript'
     Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -70,3 +74,10 @@ let g:cpp_concepts_highlight = 1
 
 " Java syntax [disable highlighting of identifiers]
 highlight link JavaIdentifier NONE
+
+
+" vim.go settings
+let g:go_highlight_extra_types = 0
+let g:go_highlight_trailing_whitespace_error = 0
+
+" end vim.go settings

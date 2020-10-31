@@ -1,6 +1,9 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
+syntax enable
+filetype plugin indent on
+
 set termguicolors
 set re=0
 syntax enable                           " Enables syntax highlighing
@@ -34,14 +37,13 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
-"set clipboard=unnamedplus               " Copy paste between vim and everything els
-"set autochdir                           " Your working directory will always be the same as your working directory
+" set clipboard=unnamedplus               " Copy paste between vim and everything els
+" set autochdir                           " Your working directory will always be the same as your working directory
 set nobackup                            "no backup files
 set nowritebackup                       "only in case you don't want a backup file while editing
 set noswapfile                          "no swap files
 set wildmenu
 set ignorecase
-set signcolumn=no
 " set guicursor=                          "Gets rid of the different cursor shapes in diffrenet modes
 
 " use terminal background
@@ -55,7 +57,13 @@ set signcolumn=no
     " au BufWinEnter * setlocal cursorline
     " " au WinLeave * setlocal nocursorline
 " augroup END
+"
 
+if &shell =~# 'fish$'
+    set shell=bash
+endif
+
+au TermOpen * setlocal nonumber norelativenumber signcolumn=no
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vim alternatively you can run :source $MYVIMRC
 
 " You can't stop me
